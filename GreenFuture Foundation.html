@@ -1,166 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenFuture Foundation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #2E8B57; /* Green for sustainability */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee'); /* Nature background */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        .container {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-        .projects {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .project {
-            border: 1px solid #ccc;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            border-radius: 8px;
-        }
-        .project img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        button {
-            background: #2E8B57;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        button:hover {
-            background: #246b46;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenFuture Foundation</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #2d572c;
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") no-repeat center center/cover;
+      color: white;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background: #f4f4f4;
+      color: #2d572c;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2d572c;
+    }
+
+    .about p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .projects, .education, .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .dashboard .card {
+      background: #2d572c;
+      color: white;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact input, .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      background: #2d572c;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #f4f4f4;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- HEADER & NAVIGATION -->
-    <header>
-        <h1>GreenFuture Foundation</h1>
-        <p>Building a Sustainable Future Together</p>
-    </header>
-
+  <!-- Header -->
+  <header>
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#projects">Projects</a>
-        <a href="#involved">Get Involved</a>
-        <a href="#contact">Contact</a>
+      <h1>GreenFuture Foundation</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Together for a Greener World</h1>
-        <p>Join us in reforestation, renewable energy, and education programs.</p>
-        <button>Join Us</button>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Towards a Greener Future</h1>
+    <p>Building a sustainable world through action, education, and innovation.</p>
+    <a href="#contact" class="btn">Get Involved</a>
+  </section>
 
-    <!-- ABOUT US -->
-    <section id="about" class="container">
-        <h2>About Us</h2>
-        <p>GreenFuture Foundation is a non-profit organisation dedicated to promoting sustainability through reforestation, renewable energy, and community education projects. Our mission is to combat climate change and create greener futures for generations to come.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>GreenFuture Foundation is a non-profit organization dedicated to creating sustainable communities through eco-friendly initiatives, environmental education, and impactful projects worldwide.</p>
+  </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="container">
-        <h2>Our Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Reforestation">
-                <h3>Reforestation</h3>
-                <p>We plant trees to restore forests and preserve biodiversity.</p>
-            </div>
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Renewable Energy">
-                <h3>Renewable Energy</h3>
-                <p>Supporting clean energy projects like solar and wind power.</p>
-            </div>
-            <div class="project">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="Education">
-                <h3>Education</h3>
-                <p>Teaching communities about sustainability and green living.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Tree Planting</h3>
+        <p>We plant thousands of trees annually to combat deforestation.</p>
+      </div>
+      <div class="card">
+        <h3>Clean Energy</h3>
+        <p>Promoting solar and wind energy solutions for communities.</p>
+      </div>
+      <div class="card">
+        <h3>Waste Management</h3>
+        <p>Introducing recycling programs to reduce landfill waste.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- GET INVOLVED -->
-    <section id="involved" class="container">
-        <h2>Get Involved</h2>
-        <p>You can make a difference by joining our volunteer network or making a donation to support our projects.</p>
-        <button>Volunteer</button>
-        <button>Donate</button>
-    </section>
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card">
+        <h3>Workshops</h3>
+        <p>Community workshops on environmental conservation.</p>
+      </div>
+      <div class="card">
+        <h3>School Programs</h3>
+        <p>Educating children about sustainability and climate change.</p>
+      </div>
+      <div class="card">
+        <h3>Online Resources</h3>
+        <p>Providing guides and toolkits for sustainable living.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <p>Email: info@greenfuture.org</p>
-        <p>Phone: +27 123 456 789</p>
-        <p>Follow us on 
-            <a href="#">Facebook</a>, 
-            <a href="#">Twitter</a>, 
-            <a href="#">Instagram</a>
-        </p>
-    </section>
+  <!-- Dashboard Section -->
+  <section id="dashboard">
+    <h2>Impact Dashboard</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>10,000+</h3>
+        <p>Trees Planted</p>
+      </div>
+      <div class="card">
+        <h3>500+</h3>
+        <p>Workshops Held</p>
+      </div>
+      <div class="card">
+        <h3>50+</h3>
+        <p>Communities Served</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 GreenFuture Foundation | All Rights Reserved</p>
-    </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GreenFuture Foundation | All Rights Reserved</p>
+    <div>
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
 </body>
 </html>
+
+
