@@ -1,45 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenFuture Foundation</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>GreenFuture Foundation — Building a Sustainable Future</title>
+  <meta name="description" content="GreenFuture Foundation (founded 2015) promotes sustainable living, tree planting and community environmental education in Johannesburg and across South Africa.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="GreenFuture Foundation — Building a Sustainable Future">
+  <meta property="og:description" content="Join GreenFuture Foundation to plant trees, support renewable energy projects and educate communities.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+  <link rel="canonical" href="https://www.greenfuture.org.za/">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"GreenFuture Foundation",
+    "url":"https://www.greenfuture.org.za/",
+    "logo":"https://www.greenfuture.org.za/assets/logo.png",
+    "sameAs":["https://www.facebook.com/greenfuture","https://www.instagram.com/greenfuture"]
+  }
+  </script>
 </head>
 <body>
   <header>
-    <h1>GreenFuture Foundation</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <div class="brand"><span aria-hidden="true">🌱</span> GreenFuture Foundation</div>
+      <nav class="primary" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Towards a Greener Future</h2>
-    <p>Join us in creating sustainable change through action and education.</p>
-    <a href="contact.html" class="btn">Get Involved</a>
-  </section>
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-inner">
+        <div>
+          <h1>Building a Sustainable Future Together</h1>
+          <p class="lead">GreenFuture Foundation promotes reforestation, renewable energy and community education so communities can thrive.</p>
+          <p>
+            <a class="btn" href="enquiry.html">Volunteer / Sponsor</a>
+            <a class="btn alt" href="services.html">See Projects</a>
+          </p>
+        </div>
+        <div class="card">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=480 480w, https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1024 1024w" sizes="(max-width:640px) 100vw, 420px">
+            <img alt="Volunteers planting trees" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+          </picture>
+          <p class="muted">Join our tree planting days and community workshops — small actions create big impact.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>
-      GreenFuture Foundation is dedicated to environmental sustainability,
-      focusing on renewable energy, conservation, and community education.
-    </p>
-  </section>
+    <section class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="lead">Quick view of current initiatives</p>
+      <div class="projects-grid grid">
+        <article class="card project-card">
+          <img alt="Tree planting" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+          <h3>Reforestation</h3>
+          <p>Planting indigenous saplings in urban and rural schools.</p>
+        </article>
+        <article class="card project-card">
+          <img alt="Solar panels" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+          <h3>Renewable Energy</h3>
+          <p>Solar kits for clinics and learning centers.</p>
+        </article>
+        <article class="card project-card">
+          <img alt="Education workshop" src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+          <h3>Education</h3>
+          <p>Workshops for teachers and community leaders.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery">
+        <img alt="Tree saplings" src="https://images.unsplash.com/photo-1503264116251-35a269479413" data-large="https://images.unsplash.com/photo-1503264116251-35a269479413">
+        <img alt="Volunteers" src="https://images.unsplash.com/photo-1520975681621-0e3bdc8d0f6d" data-large="https://images.unsplash.com/photo-1520975681621-0e3bdc8d0f6d">
+        <img alt="Solar installation" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" data-large="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Quick Impact Stats</h2>
+      <div class="stats">
+        <div class="stat card"><h3>10,000+</h3><p>Trees planted</p></div>
+        <div class="stat card"><h3>500+</h3><p>Workshops</p></div>
+        <div class="stat card"><h3>50+</h3><p>Communities served</p></div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2025 GreenFuture Foundation | Follow us on 
-      <a href="#">Facebook</a> | <a href="#">Twitter</a>
-    </p>
+    <div class="container">
+      <p>© 2025 GreenFuture Foundation — Registered NGO (demo)</p>
+      <p class="muted">Follow us: <a href="#" style="color:#c7f0d4">Facebook</a> • <a href="#" style="color:#c7f0d4">Instagram</a></p>
+    </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
+
+
 
 
