@@ -1,44 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - GreenFuture</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Contact - GreenFuture Foundation</title>
+  <meta name="description" content="Contact GreenFuture Foundation: email, phone and contact form.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>GreenFuture Foundation</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <div class="brand">🌱 GreenFuture Foundation</div>
+      <nav class="primary"><a href="index.html">Home</a><a href="services.html">Projects</a><a href="about.html">About</a></nav>
+    </div>
   </header>
 
-  <section>
-    <h2>Contact Us</h2>
-    <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p class="lead">Use this form to ask general questions or request more information.</p>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br><br>
+    <form id="contactForm" class="card">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" type="tel" placeholder="+27 11 000 0000">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
 
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br><br>
-
-      <button type="submit">Send</button>
+      <div style="margin-top:10px;">
+        <button type="submit" class="btn">Send Message</button>
+      </div>
+      <!-- status area appended by script.js -->
     </form>
-  </section>
+
+    <aside style="margin-top:18px;">
+      <h3>Office locations</h3>
+      <ul>
+        <li>Johannesburg — Head Office</li>
+        <li>Cape Town — Regional Hub</li>
+      </ul>
+    </aside>
+  </main>
 
   <footer>
-    <p>© 2025 GreenFuture Foundation</p>
+    <div class="container">
+      <p>© 2025 GreenFuture Foundation</p>
+      <p class="muted">Demo site for academic submission — replace contact endpoints in production.</p>
+    </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
-
