@@ -1,0 +1,86 @@
+/* css/style.css - Shared stylesheet for GreenFuture Foundation */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7faf9;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* Container */
+.container { width: 92%; max-width: 1100px; margin: 0 auto; padding: 24px 0; }
+
+/* Header / Nav */
+header { background: #1f6f43; color: #fff; position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 6px rgba(15,23,42,0.06); }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; width:92%; max-width:1100px; margin: 0 auto; padding:12px 0; }
+.brand { font-weight:700; display:flex; gap:8px; align-items:center; }
+nav.primary { display:flex; gap:12px; align-items:center; }
+nav.primary a { color: #e6f4ea; text-decoration: none; padding:6px 10px; border-radius:6px; font-weight:600; }
+nav.primary a:hover { background: rgba(255,255,255,0.06); }
+
+/* Hero */
+.hero { background: linear-gradient(180deg, rgba(31,111,67,0.06), rgba(31,111,67,0.02)); padding:48px 0; }
+.hero-inner { display:grid; grid-template-columns: 1fr; gap:18px; align-items:center; }
+.hero h1 { font-size: 2rem; margin-bottom:8px; color:#0f1720; }
+.lead { color:#475569; max-width:66ch; }
+
+/* Grid utilities */
+.grid { display:grid; gap:18px; }
+.projects-grid { grid-template-columns: repeat(1, 1fr); }
+
+/* Cards */
+.card { background:#fff; border-radius:10px; padding:14px; box-shadow: 0 6px 18px rgba(15,23,42,0.04); border:1px solid rgba(15,23,42,0.04); }
+.card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+
+/* Buttons */
+.btn { display:inline-block; background:#1f6f43; color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; border:none; cursor:pointer; }
+.btn.alt { background:#e6f4ea; color:#1f6f43; border:2px solid #d8f0dc; }
+
+/* Forms */
+form { background:#fff; padding:14px; border-radius:10px; border:1px solid #e6eef0; box-shadow:0 6px 12px rgba(15,23,42,0.03); max-width:720px; }
+.input-row { display:flex; gap:12px; flex-wrap:wrap; }
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+  width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; font-size:1rem;
+}
+textarea { min-height:120px; resize:vertical; }
+
+/* Error states */
+.error { border-color:#e11d48 !important; box-shadow:0 0 0 3px rgba(225,29,72,0.06); }
+.error-msg { color:#e11d48; font-size:0.95rem; margin-top:6px; }
+
+/* Gallery */
+.gallery { display:grid; gap:12px; grid-template-columns: repeat(2,1fr); }
+.gallery img { border-radius:8px; cursor:pointer; transition: transform .18s ease; }
+.gallery img:hover { transform: scale(1.03); }
+
+/* Lightbox overlay */
+.lightbox { position:fixed; inset:0; display:none; background: rgba(3,7,18,0.72); align-items:center; justify-content:center; padding:20px; z-index:2000; }
+.lightbox img { max-width:90%; max-height:80%; border-radius:8px; box-shadow:0 8px 30px rgba(0,0,0,0.5); }
+.lightbox.show { display:flex; }
+
+/* Accordion */
+.accordion { border-radius:8px; overflow:hidden; }
+.accordion-item + .accordion-item { margin-top:10px; }
+.accordion-summary { background:#fff; padding:10px 14px; cursor:pointer; border:1px solid #e6eef0; display:flex; justify-content:space-between; align-items:center; }
+.accordion-content { padding:12px 14px; border-left:1px solid #e6eef0; border-right:1px solid #e6eef0; border-bottom:1px solid #e6eef0; background:#fff; display:none; }
+
+/* Stats */
+.stats { display:flex; gap:12px; flex-wrap:wrap; }
+.stat { flex:1 1 180px; background:#fff; padding:14px; border-radius:10px; text-align:center; }
+
+/* Footer */
+footer { background:#0f1720; color:#f8fafc; padding:24px 0; text-align:center; margin-top:20px; }
+.muted { color:#64748b; }
+
+/* Responsive */
+@media (min-width:640px) {
+  .hero-inner { grid-template-columns: 1fr 420px; }
+  .projects-grid { grid-template-columns: repeat(2,1fr); }
+  .gallery { grid-template-columns: repeat(3,1fr); }
+}
+@media (min-width:1024px) {
+  .projects-grid { grid-template-columns: repeat(3,1fr); }
+  .grid-3 { grid-template-columns: repeat(3,1fr); }
+}
